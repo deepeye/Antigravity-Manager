@@ -132,6 +132,14 @@ Download from [GitHub Releases](https://github.com/lbjlaq/Antigravity-Manager/re
 *   **Windows**: `.msi` or portable `.zip`
 *   **Linux**: `.deb` or `AppImage`
 
+### Option C: Remote Server Deployment (Headless Linux)
+If you need to run on a headless remote Linux server (Ubuntu/Debian/CentOS), use our **Headless (Xvfb)** one-click deployment solution:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/lbjlaq/Antigravity-Manager/main/deploy/headless-xvfb/install.sh | sudo bash
+```
+> **See**: [Server Deployment Guide (deploy/headless-xvfb)](./deploy/headless-xvfb/README.md)
+
 ### 🛠️ Troubleshooting
 
 #### macOS says "App is damaged"?

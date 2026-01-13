@@ -131,6 +131,14 @@ brew install --cask antigravity-tools
 *   **Windows**: `.msi` 或 便携版 `.zip`
 *   **Linux**: `.deb` 或 `AppImage`
 
+### 选项 C: 远程服务器部署 (Headless Linux)
+如果您需要在无界面的远程 Linux 服务器（如 Ubuntu/Debian/CentOS）上运行，可以使用我们提供的 **Headless (Xvfb)** 一键部署方案：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/lbjlaq/Antigravity-Manager/main/deploy/headless-xvfb/install.sh | sudo bash
+```
+> **详情见**: [服务器部署指南 (deploy/headless-xvfb)](./deploy/headless-xvfb/README.md)
+
 ---
 
 Copyright © 2024-2026 [lbjlaq](https://github.com/lbjlaq)
