@@ -232,6 +232,9 @@ print(response.choices[0].message.content)
             - **智能 HTML 清理与截断**: 
                 - **深度剥离**: 针对浏览器快照自动移除 `<style>`、`<script>` 及内联 Base64 资源。
                 - **结构化截断**: 优化截断算法，确保不在 HTML 标签或 JSON 中间切断，避免产生破坏性的 400 结构错误。
+        - **账号索引加载容错修复 (Fix Issue #619)**:
+            - **修复内容**: 在加载 `accounts.json` 时增加了对空文件的检测及自动重置逻辑。
+            - **影响范围**: 彻底解决了因索引文件损坏/为空导致的软件启动报错 `expected value at line 1 column 1`。
     *   **v3.3.28 (2026-01-14)**:
         - **OpenAI Thinking Content 修复 (PR #604)**:
             - **修复 Gemini 3 Pro thinking 内容丢失**: 在流式响应收集器中添加 `reasoning_content` 累积逻辑,解决了 Gemini 3 Pro (high/low) 非流式响应中思考内容丢失的问题。

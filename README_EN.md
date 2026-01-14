@@ -214,6 +214,9 @@ print(response.choices[0].message.content)
             - **Intelligent HTML Cleaning & Truncation**:
                 - **Deep Stripping**: Automatically removes `<style>`, `<script>`, and inline Base64 resources from browser snapshots.
                 - **Structured Truncation**: Enhanced truncation algorithm prevents cutting through HTML tags or JSON objects, avoiding 400 structure errors.
+        - **Account Index Loading Robustness (Fix Issue #619)**:
+            - **Fix Details**: Added empty file detection and automatic reset logic when loading `accounts.json`.
+            - **Impact**: Completely resolved the startup error `expected value at line 1 column 1` caused by corrupted or empty index files.
     *   **v3.3.28 (2026-01-14)**:
         - **OpenAI Thinking Content Fix (PR #604)**:
             - **Fixed Gemini 3 Pro Thinking Content Loss**: Added `reasoning_content` accumulation logic in streaming response collector, resolving the issue where Gemini 3 Pro (high/low) non-streaming responses lost thinking content.
